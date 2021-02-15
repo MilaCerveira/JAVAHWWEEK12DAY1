@@ -2,10 +2,27 @@ package attractions;
 
 
 import behaviours.ISecurity;
+import people.Visitor;
 
 public class Playground extends Attraction implements ISecurity {
 
     public Playground(String name, int rating) {
         super(name, rating);
+    }
+
+    @Override
+    public boolean isAllowedTo(Visitor visitor) {
+        if (visitor.getAge() > 15) {
+            return false;
+        }
+            return true;
+
+    }
+    public int getRating() {
+    return 10;
+    }
+
+    public String getName() {
+    return "name";
     }
 }

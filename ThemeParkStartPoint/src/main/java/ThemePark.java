@@ -1,10 +1,16 @@
 import attractions.Attraction;
+import behaviours.IReviewed;
 import stalls.Stall;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ThemePark {
-    private List<Attraction> attractions = new ArrayList<>();
-    private List<Stall> stalls = new ArrayList<>();
+    private List<IReviewed> attractionsAndStalls = new ArrayList<>();
+
+    public List<IReviewed> getAllReviewed () {
+        return attractionsAndStalls;
+    }
 }
+
+
